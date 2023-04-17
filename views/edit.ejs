@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>Edit Item</h1>
+    <form method="POST" action="/update/<%= id %>">
+      <input type="text" name="item" value="<%= item %>" />
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>

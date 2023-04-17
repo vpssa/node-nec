@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.js CRUD Application</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>Node.js CRUD Application</h1>
+    <form method="POST" action="/">
+      <input type="text" name="item" placeholder="Add new item" />
+      <button type="submit">Add</button>
+    </form>
+    <ul>
+      <% for(var i=0; i<items.length; i++) { %>
+        <li>
+          <span><%= items[i] %></span>
+          <form method="POST" action="/delete/<%= i %>">
+            <button type="submit">Delete</button>
+          </form>
+          <form method="GET" action="/edit/<%= i %>">
+            <button type="submit">Edit</button>
+          </form>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
